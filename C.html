@@ -41,6 +41,80 @@
   .social-links a {
     font-size: 1.5rem;
   }
+  .carousel {
+    position: relative;
+  }
+  .carousel-item > .container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    max-width: 82%;
+  }
+  .carousel-item > .container > .text-center {
+    margin-top: 0.5rem;
+  }
+  .carousel-item .row {
+    flex: 1;
+    align-items: stretch;
+  }
+  .carousel-item .col-lg-5 {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+  .carousel-item img {
+    height: 16rem;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+  }
+  .feature-label {
+    font-size: 1.26rem;
+    letter-spacing: 0.12em;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #6b7280;
+    margin-bottom: 0.85rem;
+  }
+  .feature-heading {
+    font-size: clamp(1.5rem, 2vw, 2.35rem);
+    line-height: 1.08;
+    letter-spacing: -0.02em;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+  .carousel-indicators {
+    bottom: 0.75rem;
+    z-index: 3;
+  }
+  .carousel-indicators li {
+    background-color: rgba(17, 24, 39, 0.35);
+    margin: 0 0.35rem;
+  }
+  .carousel-control-prev,
+  .carousel-control-next {
+    width: 3rem;
+    z-index: 4;
+    opacity: 0.85;
+  }
+  .carousel-control-prev {
+    left: 0.5rem;
+  }
+  .carousel-control-next {
+    right: 0.5rem;
+  }
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.4));
+  }
+  @media (max-width: 991.98px) {
+    .carousel-inner,
+    .carousel-item {
+      height: clamp(26rem, 62vw, 47.5rem);
+    }
+  }
   @media (min-width: 992px) {
     .gc-flex-gap-lg-5 > * {
       margin-right: 3rem;
@@ -233,7 +307,7 @@
           <ul class="list-unstyled mb-4">
             <li class="mb-3"><strong>Security by design</strong> &mdash; encryption both at rest and in transit; algorithms run in a fortified environment.</li>
             <li class="mb-3"><strong>Benchmark results are trusted and cited</strong> &mdash; standardized evaluations, on-platform.</li>
-            <li class="mb-3"><strong>Long-lived challenges</strong> &mdash; up-front efforts keeps paying off.</li>
+            <li class="mb-3"><strong>Long-lived and challenging benchmarks</strong> &mdash; up-front efforts keeps paying off.</li>
             <li><strong>Clinical relevance</strong> &mdash; benchmark against clinical experts, not just algorithms, via reader studies..</li>
           </ul>
           <div class="d-flex flex-wrap gc-flex-gap-2">
@@ -257,7 +331,7 @@
           </ul>
           <div class="d-flex flex-wrap gc-flex-gap-2">
             <a href="#" class="btn btn-outline-dark">Browse algorithms</a>
-            <a href="#" class="btn btn-primary">Book a demo</a>
+            <a href="#" class="btn btn-primary">Publish your own</a>
           </div>
         </div>
         <div class="col-lg-6 d-flex justify-content-lg-end">
@@ -271,7 +345,7 @@
 
 <section>
  
-<div id="carouselExampleIndicators" class="carousel slide container" data-ride="carousel">
+<div id="carouselExampleIndicators" class="carousel slide container border-top bg-gray-100" data-ride="carousel" data-interval="10000" data-pause="hover">
 
   <ol class="carousel-indicators">
     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -281,15 +355,70 @@
 
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: First slide" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#555" dy=".3em">First slide</text></svg>
-
+      <div class="container pb-4">
+        <div class="text-center mb-3">
+          <p class="text-uppercase small font-weight-bold text-muted mb-1" style="letter-spacing:.06em">Features</p>
+        </div>
+        <div class="row g-4 g-lg-5 align-items-center">
+          <div class="col-lg-7">
+            <img class="img-fluid rounded border" width="1400" height="783" loading="lazy" alt="The CIRRUS viewer showing a full prostate MRI slice with an annotated lesion, beside a panel of study questions" 
+            src="images/readerstudies.jpg"/>
+          </div>
+          <div class="col-lg-5">
+            <p class="feature-label">Reader studies</p>
+            <h3 class="feature-heading h4 mb-3">Annotate datasets and explore AI-assisted diagnostics with expert clinical reads.</h3>
+            <div class="d-flex flex-wrap gc-flex-gap-2">
+              <a href="https://grand-challenge.org/reader-studies/" class="btn btn-outline-dark">Browse reader studies</a>
+              <a href="#" class="btn btn-primary">Book a demo</a>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="carousel-item">
-      <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Second slide" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#666"></rect><text x="50%" y="50%" fill="#444" dy=".3em">Second slide</text></svg>
-    </div>
-    <div class="carousel-item">
-      <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Third slide" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#555"></rect><text x="50%" y="50%" fill="#333" dy=".3em">Third slide</text></svg>
 
+    <div class="carousel-item">
+      <div class="container pb-4">
+        <div class="text-center mb-3">
+          <p class="text-uppercase small font-weight-bold text-muted mb-1" style="letter-spacing:.06em">Features</p>
+        </div>
+        <div class="row g-4 g-lg-5 align-items-center flex-lg-row-reverse">
+          <div class="col-lg-5">
+            <p class="feature-label">Challenge benchmarks</p>
+            <h3 class="feature-heading h4 mb-3">Benchmark AI algorithms against each other on the same clinical task.</h3>
+            <div class="d-flex flex-wrap gc-flex-gap-2">
+              <a href="#" class="btn btn-outline-dark">Browse challenges</a>
+              <a href="#" class="btn btn-primary">Host your own</a>
+            </div>
+          </div>
+          <div class="col-lg-7">
+            <img class="img-fluid rounded border" width="1400" height="875" loading="lazy" alt="A challenge leaderboard, ranking submitted algorithms by score with the team, algorithm name and submission date" 
+            src="images/challenges.jpg" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="carousel-item">
+      <div class="container pb-4">
+        <div class="text-center mb-3">
+          <p class="text-uppercase small font-weight-bold text-muted mb-1" style="letter-spacing:.06em">Features</p>
+        </div>
+        <div class="row g-4 g-lg-5 align-items-center">
+          <div class="col-lg-7">
+            <img class="img-fluid rounded border" width="1400" height="682" loading="lazy" 
+            alt="The viewer showing a pathology slide with an algorithm-generated spirochetosis mask overlaid in red, beside overlay and class controls" 
+            src="images/algorithms.jpg"/>
+          </div>
+          <div class="col-lg-5">
+            <p class="feature-label">Publishing Algorithms</p>
+            <h3 class="feature-heading h4 mb-3">Run a published model on your own cases or share your own.</h3>
+            <div class="d-flex flex-wrap gc-flex-gap-2">
+              <a href="#" class="btn btn-outline-dark">Browse algorithms</a>
+              <a href="#" class="btn btn-primary">Publish your own</a>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -308,9 +437,9 @@
 </section>
 
 <!-- ============ CONTACT ============ -->
-<section class="py-5 bg-gray-100 border-top border-bottom">
+<section>
 
-  <div class="container">
+  <div class="py-5 container border-top border-bottom">
     <div class="row align-items-center g-3">
       <div class="col-lg-8">
         <h2 class="h4 mb-1">Not sure how your project fits in?</h2>
@@ -333,8 +462,8 @@
 
 <!-- ============ HIGHLIGHTED CHALLENGES ============ -->
 <!-- {% for challenge in high_impact_challenges %} over a curated flag. -->
-<section class="py-5">
-  <div class="container">
+<section>
+  <div class="py-5 bg-gray-100 container">
     <div class="d-flex flex-wrap justify-content-between align-items-end mb-4 gc-flex-gap-2">
       <h2 class="h3 mb-0">High-Impact Challenges</h2>
       <a href="https://grand-challenge.org/challenges/" class="small text-black-50">All challenges</a>
@@ -377,8 +506,8 @@
 
 <!-- ============ NEWS &amp; EVENTS ============ -->
 <!-- Forward-looking. Past release notes stay on the blog. -->
-<section class="py-5 bg-gray-100 border-top">
-  <div class="container">
+<section>
+  <div class="container py-5 border-top">
     <div class="d-flex flex-wrap justify-content-between align-items-end mb-4 gc-flex-gap-2">
       <h2 class="h3 mb-0">News and Events</h2>
       <a href="https://grand-challenge.org/blogs/" class="small text-black-50">All blog posts</a>
