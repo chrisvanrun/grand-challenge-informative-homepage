@@ -137,20 +137,23 @@
     margin-bottom: 0.85rem;
   }
   .feature-heading {
-    font-size: clamp(1.5rem, 2vw, 2.35rem);
+    font-size: clamp(1.5rem, 1.6vw, 2.8rem);
     line-height: 1.08;
     letter-spacing: -0.02em;
     font-weight: 700;
     margin-bottom: 1rem;
   }
-  .carousel-indicators {
-    bottom: 0.75rem;
-    z-index: 3;
-  }
-  .carousel-indicators li {
-    background-color: rgba(17, 24, 39, 0.35);
-    margin: 0 0.35rem;
-  }
+  /* Put the indicators below the slides instead of over them */
+#carouselExampleIndicators .carousel-indicators {
+  position: static;      /* take them out of the absolute overlay */
+  padding-bottom: 0.5rem;  /* space below the dots, before the border/next section */
+}
+
+/* Bootstrap's default dots are white, which is invisible on a light background */
+#carouselExampleIndicators .carousel-indicators li {
+  background-color: #6c757d; /* or any color that fits your theme */
+}
+
   .carousel-control-prev,
   .carousel-control-next {
     width: 3rem;
@@ -418,19 +421,14 @@
 
 <section>
  
-<div id="carouselExampleIndicators" class="carousel slide container border-top bg-gray-100" data-ride="carousel" data-interval="10000" data-pause="hover">
+<div id="carouselExampleIndicators" class="carousel slide container border-top" data-ride="carousel" data-interval="10000" data-pause="hover">
 
-  <ol class="carousel-indicators">
-    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="1" class=""></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="2" class=""></li>
-  </ol>
 
   <div class="carousel-inner">
     <div class="carousel-item active">
       <div class="container pb-4">
         <div class="text-center mb-3">
-          <p class="text-uppercase small font-weight-bold text-muted mb-1" style="letter-spacing:.06em">Features</p>
+          <p class="feature-label text-muted mb-1">Features</p>
         </div>
         <div class="row g-4 g-lg-5 align-items-center">
           <div class="col-lg-7">
@@ -439,9 +437,8 @@
           </div>
           <div class="col-lg-5">
             <p class="feature-label">Reader studies</p>
-            <h3 class="feature-heading h4 mb-3">Annotate datasets and explore AI-assisted diagnostics with expert clinical reads.</h3>
+            <h3 class="feature-heading h4 mb-3">Generate independent clinical evidence with expert readers.</h3>
             <div class="d-flex flex-wrap gc-flex-gap-2">
-              <a href="https://grand-challenge.org/reader-studies/" class="btn btn-outline-dark">Browse reader studies</a>
               <a href="#" class="btn btn-primary">Book a demo</a>
             </div>
           </div>
@@ -452,12 +449,12 @@
     <div class="carousel-item">
       <div class="container pb-4">
         <div class="text-center mb-3">
-          <p class="text-uppercase small font-weight-bold text-muted mb-1" style="letter-spacing:.06em">Features</p>
+          <p class="feature-label text-muted mb-1">Features</p>
         </div>
         <div class="row g-4 g-lg-5 align-items-center flex-lg-row-reverse">
           <div class="col-lg-5">
             <p class="feature-label">Challenge benchmarks</p>
-            <h3 class="feature-heading h4 mb-3">Benchmark AI algorithms against each other on the same clinical task.</h3>
+            <h3 class="feature-heading h4 mb-3">Generate trusted benchmark results on hidden clinical datasets.</h3>
             <div class="d-flex flex-wrap gc-flex-gap-2">
               <a href="#" class="btn btn-outline-dark">Browse challenges</a>
               <a href="#" class="btn btn-primary">Host your own</a>
@@ -474,7 +471,7 @@
     <div class="carousel-item">
       <div class="container pb-4">
         <div class="text-center mb-3">
-          <p class="text-uppercase small font-weight-bold text-muted mb-1" style="letter-spacing:.06em">Features</p>
+          <p class="feature-label text-muted mb-1">Features</p>
         </div>
         <div class="row g-4 g-lg-5 align-items-center">
           <div class="col-lg-7">
@@ -484,7 +481,7 @@
           </div>
           <div class="col-lg-5">
             <p class="feature-label">Publishing Algorithms</p>
-            <h3 class="feature-heading h4 mb-3">Run a published model on your own cases or share your own.</h3>
+            <h3 class="feature-heading h4 mb-3">Share, discover and evaluate AI models on real clinical data.</h3>
             <div class="d-flex flex-wrap gc-flex-gap-2">
               <a href="#" class="btn btn-outline-dark">Browse algorithms</a>
               <a href="#" class="btn btn-primary">Publish your own</a>
@@ -494,6 +491,12 @@
       </div>
     </div>
   </div>
+
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1" class=""></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2" class=""></li>
+  </ol>
 
   <button class="carousel-control-prev" type="button" data-target="#carouselExampleIndicators" data-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
