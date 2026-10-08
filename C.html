@@ -7,6 +7,7 @@
 <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
 <link href="custom/core.css" rel="stylesheet">
 <link href="custom/base.css" rel="stylesheet">
+<link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
 <!-- =====================================================================
      THEME OVERRIDES — the only custom CSS on the page.
     This keeps the page visually close to the Bootstrap 5 version while
@@ -498,15 +499,16 @@
     <li data-target="#carouselExampleIndicators" data-slide-to="2" class=""></li>
   </ol>
 
-  <button class="carousel-control-prev" type="button" data-target="#carouselExampleIndicators" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </button>
+  <a class="carousel-control-prev text-dark" href="#carouselExampleIndicators" role="button" data-slide="prev">
+      <i class="fa fa-angle-left fa-2x"></i>
+      <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next text-dark" href="#carouselExampleIndicators" role="button" data-slide="next">
+      <i class="fa fa-angle-right fa-2x"></i>
+      <span class="sr-only">Next</span>
+  </a>
 
-  <button class="carousel-control-next" type="button" data-target="#carouselExampleIndicators" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </button>
+  
 </div>
 
 
