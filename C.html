@@ -41,6 +41,26 @@
   .social-links a {
     font-size: 1.5rem;
   }
+  .values-visual,
+  .values-copy {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+  .values-copy {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+  }
+  .values-copy > * {
+    width: 100%;
+  }
+  @media (max-width: 991.98px) {
+    .values-copy {
+      align-items: flex-start;
+    }
+  }
   .card-image {
     height: 10rem;
     display: flex;
@@ -312,72 +332,88 @@
 <section class="py-5">
   <div class="container">
 
-      <!-- Piece of mind -->
-      <div class="row g-4 g-lg-5 align-items-center mb-5 pb-4 border-bottom">
-        <div class="col-lg-6">
-          <p class="text-uppercase small font-weight-bold mb-2" style="letter-spacing:.06em">Support &amp; reliability</p>
-          <h3 class="h4 mb-3">Get Peace of Mind.</h3>
-          <ul class="list-unstyled mb-4">
-            <li class="mb-3"><strong>Trusted in practice</strong> &mdash; collaborators stick around, project after project.</li>
-            <li class="mb-3"><strong>Robust tools</strong> &mdash; proven since 2012 on established infrastructure, live 24/7.</li>
-            <li><strong>Human touch</strong> &mdash; an onboarding meeting, custom-tailored templates, and expert guidance along the way.</li>
-          </ul>
-          <div class="d-flex flex-wrap gc-flex-gap-2">
-            <a href="#" class="btn btn-outline-dark">See how we work</a>
-            <a href="#" class="btn btn-primary">About us</a>
-          </div>
+    <!-- Row 1: text left, image right -->
+    <div class="row g-4 g-lg-5 align-items-center mb-5 pb-4 border-bottom">
+      <div class="col-lg-7">
+        <p class="text-uppercase small fw-bold mb-2" style="letter-spacing:.06em">Support &amp; reliability</p>
+        <h3 class="h4 mb-3">Get Peace of Mind.</h3>
+        <ul class="list-unstyled mb-4">
+          <li class="mb-3"><strong>Trusted in practice</strong> &mdash; collaborators stick around, project after project.</li>
+          <li class="mb-3"><strong>Proven platform</strong> &mdash; supporting the medical AI community since 2012.</li>
+          <li><strong>Human touch</strong> &mdash; onboarding meetings, custom-tailored templates, and expert guidance along the way.</li>
+        </ul>
+        <div class="d-flex flex-wrap gc-flex-gap-2">
+          <a href="#" class="btn btn-outline-dark">See how we work</a>
+          <a href="#" class="btn btn-primary">About us</a>
         </div>
-        <div class="col-lg-6 d-flex justify-content-lg-end">
-          <img class="w-75 img-fluid" src="images/undraw_casual-browsing_c09r.svg" alt="Support and reliability illustration" loading="lazy">
-        </div>
+      </div>
+      <div class="col-lg-5 d-flex justify-content-center align-items-center">
+        <img class="img-fluid" style="max-width:80%" src="images/undraw_casual-browsing_c09r.svg" alt="Person browsing the platform" loading="lazy">
+      </div>
     </div>
 
-
-
-     <div class="row g-4 g-lg-6 align-items-center mb-5 pb-4 border-bottom">
-        <div class="col-lg-5 d-flex justify-content-lg-start">
-          <img class="img-fluid" src="images/undraw_medicine_hqqg.svg" alt="Support and reliability illustration" loading="lazy">
+    <!-- Row 2: image left, text right (reversed on desktop only) -->
+    <div class="row g-4 g-lg-5 align-items-center flex-lg-row-reverse mb-5 pb-4 border-bottom">
+      <div class="col-lg-7">
+        <p class="text-uppercase small fw-bold mb-2" style="letter-spacing:.06em">Benchmarks</p>
+        <h3 class="h4 mb-3">Get Credible Challenge Benchmarks.</h3>
+        <ul class="list-unstyled mb-4">
+          <li class="mb-3"><strong>Security by design</strong> &mdash; encryption both at rest and in transit; algorithms run in a fortified environment.</li>
+          <li class="mb-3"><strong>Trustworthy results</strong> &mdash; standardized evaluations, executed on-platform.</li>
+          <li class="mb-3"><strong>Lasting value</strong> &mdash; benchmarks stay relevant long after launch, so up-front efforts keep paying off.</li>
+          <li><strong>Clinical relevance</strong> &mdash; benchmark algorithms against each other, or against clinical experts.</li>
+        </ul>
+        <div class="d-flex flex-wrap gc-flex-gap-2">
+          <a href="#" class="btn btn-outline-dark">Browse challenges</a>
+          <a href="#" class="btn btn-primary">Host your own challenge</a>
         </div>
-        <div class="col-lg-7">
-          <p class="text-uppercase small font-weight-bold mb-2" style="letter-spacing:.06em">Benchmark with confidence</p>
-          <h3 class="h4 mb-3">Get Credible Challenge Benchmarks.</h3>
-          <ul class="list-unstyled mb-4">
-            <li class="mb-3"><strong>Security by design</strong> &mdash; encryption both at rest and in transit; algorithms run in a fortified environment.</li>
-            <li class="mb-3"><strong>Benchmark results are trusted and cited</strong> &mdash; standardized evaluations, on-platform.</li>
-            <li class="mb-3"><strong>Long-lived and challenging benchmarks</strong> &mdash; up-front efforts keeps paying off.</li>
-            <li><strong>Clinical relevance</strong> &mdash; benchmark against clinical experts, not just algorithms, via reader studies..</li>
-          </ul>
-          <div class="d-flex flex-wrap gc-flex-gap-2">
-            <a href="#" class="btn btn-outline-dark">Browse challenges</a>
-            <a href="#" class="btn btn-primary">Host your own challenge</a>
-          </div>
-        </div>
-        
+      </div>
+      <div class="col-lg-5 d-flex justify-content-center align-items-center">
+        <img class="img-fluid" style="max-width:80%" src="images/undraw_medicine_hqqg.svg" alt="Medicine and benchmarking illustration" loading="lazy">
+      </div>
     </div>
 
-
-    <div class="row g-4 g-lg-5 align-items-center pb-4">
-        <div class="col-lg-7">
-          <p class="text-uppercase small font-weight-bold mb-2" style="letter-spacing:.06em">Intellectual property</p>
-          <h3 class="h4 mb-3">Keep Custody.</h3>
-          <ul class="list-unstyled mb-4">
-            <li class="mb-3"><strong>Private test data</strong> &mdash; by default.</li>
-            <li class="mb-3"><strong>Get performance results on real clinical data you'd otherwise have no access to</strong> &mdash; without giving up custody of your model. Easily contribute to science without giving up your secret sauce.</li>
-            <li  class="mb-3"><strong>Try-before-you-trust</strong> &mdash; test someone else's algorithm while keeping custody of your data and the results.</li>
-            <li><strong>Collaborate without giving up custody</strong> &mdash; whichever side of the table you're on.</li>
-          </ul>
-          <div class="d-flex flex-wrap gc-flex-gap-2">
-            <a href="#" class="btn btn-outline-dark">Browse algorithms</a>
-            <a href="#" class="btn btn-primary">Publish your own</a>
-          </div>
+    <!-- Row 3: text left, image right -->
+    <div class="row g-4 g-lg-5 align-items-center mb-5 pb-4 border-bottom">
+      <div class="col-lg-7">
+        <p class="text-uppercase small fw-bold mb-2" style="letter-spacing:.06em">Intellectual property</p>
+        <h3 class="h4 mb-3">Keep Control of Your Data and Algorithms.</h3>
+        <ul class="list-unstyled mb-4">
+          <li class="mb-3"><strong>Private benchmark data</strong> &mdash; hidden from participants by default.</li>
+          <li class="mb-3"><strong>Real-world performance</strong> &mdash; get results on real clinical data without giving up your model.</li>
+          <li><strong>Try-before-you-trust</strong> &mdash; test third-party algorithms while keeping control of your data and the results.</li>
+        </ul>
+        <div class="d-flex flex-wrap gc-flex-gap-2">
+          <a href="#" class="btn btn-outline-dark">Browse algorithms</a>
+          <a href="#" class="btn btn-primary">Publish your own</a>
         </div>
-        <div class="col-lg-5 d-flex justify-content-lg-end">
-          <img class="img-fluid" src="images/undraw_group-project_kow1.svg" alt="Support and reliability illustration" loading="lazy">
-        </div>
+      </div>
+      <div class="col-lg-5 d-flex justify-content-center align-items-center">
+        <img class="img-fluid" style="max-width:80%" src="images/undraw_group-project_kow1.svg" alt="Team collaborating on a project" loading="lazy">
+      </div>
     </div>
+
+    <!-- Row 4: image left, text right -->
+    <div class="row g-4 g-lg-5 align-items-center flex-lg-row-reverse pb-4">
+      <div class="col-lg-7">
+        <p class="text-uppercase small fw-bold mb-2" style="letter-spacing:.06em">Clinical validation</p>
+        <h3 class="h4 mb-3">Get Independent Evidence.</h3>
+        <ul class="list-unstyled mb-4">
+          <li class="mb-3"><strong>Expert ground truth</strong> &mdash; multi-reader consensus to train on or use as a reference standard.</li>
+          <li class="mb-3"><strong>Head-to-head comparison</strong> &mdash; algorithm against clinical readers, on the same cases.</li>
+          <li class="mb-3"><strong>Support your technical documentation</strong> &mdash; structured, traceable reads that contribute to your clinical evidence package.</li>
+          <li><strong>Recruit without borders</strong> &mdash; readers join from any browser, any hospital, any country, while keeping data securely on the platform.</li>
+        </ul>
+        <div class="d-flex flex-wrap gc-flex-gap-2">
+          <a href="#" class="btn btn-primary">Book a reader-study demo</a>
+        </div>
+      </div>
+      <div class="col-lg-5 d-flex justify-content-center align-items-center">
+        <img class="img-fluid" style="max-width:80%" src="images/undraw_co-working_becw.svg" alt="People co-working on a study" loading="lazy">
+      </div>
+    </div>
+
   </div>
-
-  
 </section>
 
 <section>
